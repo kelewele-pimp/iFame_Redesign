@@ -1,16 +1,20 @@
 package com.example.desmond.ifame;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import fragments.NavigationDrawerFragment;
+
 
 public class IFameMainActivity extends ActionBarActivity {
 
     private Toolbar toolbar;
+    private DrawerLayout mDrawerLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +22,15 @@ public class IFameMainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_ifame_main);
         toolbar = (Toolbar) findViewById(R.id.ifame_main_toolbar);
         setSupportActionBar(toolbar);
+        /*
+            Setup navigation drawer
+         */
+        NavigationDrawerFragment navigationDrawerFragment =
+                (NavigationDrawerFragment) getFragmentManager().findFragmentById(R.id.nav_drawer_fragment);
+        mDrawerLayout = (DrawerLayout) findViewById(R.id.ifame_drawerLayout);
+        //the drawer layout and toolbar have to be pass to the Actionbardrawertoggle in other to perform drawer-open and close actions
+        navigationDrawerFragment.setup(mDrawerLayout, toolbar);
+
     }
 
     @Override
