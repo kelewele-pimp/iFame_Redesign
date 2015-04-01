@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">IFame</string>
+    <string name="app_name">iFame</string>
+    <string name="title_activity_ifame_main">iFame</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
 </resources>
