@@ -1,4 +1,4 @@
-package PreferenceHelper;
+package preference_helper;
 
 import android.content.Context;
 import android.content.SharedPreferences;

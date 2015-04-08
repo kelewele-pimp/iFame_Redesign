@@ -5,10 +5,52 @@
     android:background="@color/iFameNavigationDrawerColor"
     tools:context="fragments.NavigationDrawerFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:background="@drawable/navigation_drawer_bkgrnd"
+        android:layout_height="wrap_content">
 
+        <ImageView
+            android:id="@+id/header_image"
+            android:layout_margin="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_no_user" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="20dp"
+
+            android:layout_below="@+id/header_image"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/nav_drawer_name_text"
+                android:layout_width="match_parent"
+                android:text="Desmond Agyeman"
+                android:textColor="@color/iFameNavigationDrawerHeaderTextColor"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/nav_drawer_mail_text"
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_height="wrap_content"
+                android:text="desmond.agyeman@studenti.unitn.it"
+                android:textColor="@color/iFameNavigationDrawerHeaderTextColor"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/nav_drawer_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
 </FrameLayout>
