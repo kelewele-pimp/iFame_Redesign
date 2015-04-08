@@ -3,4 +3,5 @@
     <color name="iFamePrimaryColor">#F44336</color>
     <color name="iFamePrimaryColorDark">#B71C1C</color>
     <color name="iFameColorAccent">#2E86EA</color>
+    <color name="iFameNavigationDrawerColor">#EEE</color>
 </resources>

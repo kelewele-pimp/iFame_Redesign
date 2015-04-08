@@ -19,17 +19,18 @@ public class IFameMainActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ifame_main);
+        setContentView(R.layout.activity_ifame_main_new);
         toolbar = (Toolbar) findViewById(R.id.ifame_main_toolbar);
         setSupportActionBar(toolbar);
         /*
             Setup navigation drawer
          */
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
         NavigationDrawerFragment navigationDrawerFragment =
-                (NavigationDrawerFragment) getFragmentManager().findFragmentById(R.id.nav_drawer_fragment);
+                (NavigationDrawerFragment) getFragmentManager().findFragmentById(R.id.navigation_drawer_fragment);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.ifame_drawerLayout);
         //the drawer layout and toolbar have to be pass to the Actionbardrawertoggle in other to perform drawer-open and close actions
-        navigationDrawerFragment.setup(mDrawerLayout, toolbar);
+        navigationDrawerFragment.setup(R.id.navigation_drawer_fragment, mDrawerLayout, toolbar);
 
     }
 

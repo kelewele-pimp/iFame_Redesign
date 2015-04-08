@@ -1,0 +1,29 @@
+<!--
+    This file's navigation drawer covers the entire toolbar
+-->
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ifame_drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/ifame_main_toolbar"
+            layout="@layout/toolbar_ifame_main" />
+
+    </FrameLayout>
+
+    <fragment
+        android:id="@+id/navigation_drawer_fragment"
+        android:name="fragments.NavigationDrawerFragment"
+        android:layout_width="@dimen/nav_drawer_width"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/textView"
+        android:layout_gravity="start"
+        tools:layout="@layout/fragment_navigation_drawer" />
+
+</android.support.v4.widget.DrawerLayout>

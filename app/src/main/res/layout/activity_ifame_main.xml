@@ -1,18 +1,39 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!--
+    This file's navigation drawer appears beneath the toolbar
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.desmond.ifame.IFameMainActivity">
+    android:orientation="vertical"
+    tools:context="com.example.desmond.materialdesigntest.MainActivity">
 
-    <include android:id="@+id/ifame_main_toolbar"
-        layout="@layout/toolbar_ifame_main">
+    <include
+        android:id="@+id/ifame_main_toolbar"
+        layout="@layout/toolbar_ifame_main" />
 
-    </include>
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/ifame_drawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:text="@string/hello_world"
-        android:layout_width="wrap_content"
-        android:layout_below="@+id/ifame_main_toolbar"
-        android:layout_height="wrap_content" />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-</RelativeLayout>
+        </FrameLayout>
+
+        <fragment
+            android:id="@+id/navigation_drawer_fragment"
+            android:name="fragments.NavigationDrawerFragment"
+            android:layout_width="@dimen/nav_drawer_width"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/textView"
+            android:layout_gravity="start"
+            tools:layout="@layout/fragment_navigation_drawer" />
+
+    </android.support.v4.widget.DrawerLayout>
+
+</LinearLayout>
+
+
